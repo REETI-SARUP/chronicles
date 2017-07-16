@@ -1,0 +1,2 @@
+module CategoryMappingsHelper
+end

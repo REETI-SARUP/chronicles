@@ -1,0 +1,2 @@
+class CategoryMappingsController < ApplicationController
+end
