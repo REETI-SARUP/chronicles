@@ -1,0 +1,22 @@
+<%= form_for(@category_map) do |f| %>
+  <% if @category_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category_map.errors.count, "error") %> prohibited this category_map from being saved:</h2>
+
+      <ul>
+      <% @category_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category, options_for_select([['Diary',0],['Travel Journal', 1],['Misc', 2]])%>
+
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

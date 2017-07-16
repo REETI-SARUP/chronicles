@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @category_map.User %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @category_map.category %>
+</p>
+
+<%= link_to 'Edit', edit_category_map_path(@category_map) %> |
+<%= link_to 'Back', category_maps_path %>

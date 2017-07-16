@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @travel_journal.user %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @travel_journal.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @travel_journal.description %>
+</p>
+
+<%= link_to 'Edit', edit_travel_journal_path(@travel_journal) %> |
+<%= link_to 'Back', travel_journals_path %>

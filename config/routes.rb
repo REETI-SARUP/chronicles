@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :miscs
+  resources :travel_journals
+  resources :diaries
+  resources :category_maps
   get 'main/about'
 
   devise_for :users

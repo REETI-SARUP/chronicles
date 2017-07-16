@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @misc.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @misc.user %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @misc.title %>
+</p>
+
+<%= link_to 'Edit', edit_misc_path(@misc) %> |
+<%= link_to 'Back', miscs_path %>
