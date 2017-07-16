@@ -55,6 +55,7 @@ nav ul li a:visited{
 
 nav ul li a:hover {
 	color: yellow;
+	background-color: transparent;
 }
 
 #websiteName h1{
