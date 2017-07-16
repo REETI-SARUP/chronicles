@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'main/about'
+
   devise_for :users
-  get 'home/index'
-  root to: "home#index"
+  get 'main/index'
+  root to: "main#about"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
