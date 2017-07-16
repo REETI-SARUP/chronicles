@@ -1,15 +1,35 @@
-<header>
+<header class='siteHeader'>
 	<div class="logo">
 		<img src="http://via.placeholder.com/350x150">
 	</div>
+	<div id="websiteName">
+		<h1> Chronicles </h1>
+	</div>
 	<nav>
 		<ul>
-			<li>Home</li>
-			<li>About Us</li>
-			<li>Contact US</li>
+			<li><a href="#home" onclick="smoothScroll(this.hash.slice(1))">Home</a></li>
+        	<li><a href="#aboutUs" onclick="smoothScroll(this.hash.slice(1))">About Us</a></li>
+    	    <li><a href="#contactUs" onclick="smoothScroll(this.hash.slice(1))">Contact Us</a></li>
 		</ul>
 	</nav>
 </header>
 
-<%= link_to "signin/signup", :controller => "home", :action => "index"%>
+<div id="authenticate">
+<button id="auth">
+<%= link_to "LogIn/ SignUp", :controller => "home", :action => "index"%>
+</button>
+</div>
 
+<section id="home">
+<header> <h1>About the app</h1> </header>
+</section>
+
+
+<section id="aboutUs">
+<header><h1> About Us </h1></header>
+</section>
+
+
+<section id="contactUs">
+<header><h1> Contact Us </h1></header>
+</section>

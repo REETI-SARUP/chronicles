@@ -1,0 +1,101 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	margin: 70px;
+	box-shadow: 4px 8px 15px 5px darkorange;
+	padding: 20px;
+	height: 400px;
+}
+
+
+header.siteHeader{
+	background-color: navy;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding-left: 65px;
+	padding-right: 65px;
+	height: 70px;
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+div.logo img {
+	height: 36px;
+}
+
+header.siteHeader nav ul {
+	display: flex;
+}
+
+header.siteHeader nav ul li{
+	list-style: none;
+	margin-left: 10px;
+	padding: 4px;
+}
+
+nav ul li a:link {
+	color: white;
+	font-size: 20px; 
+	font-weight: bold;
+}
+
+nav ul li a:visited{
+	color: lightpink;
+}
+
+nav ul li a:hover {
+	color: yellow;
+}
+
+#websiteName h1{
+	color: white;
+	font-family: georgia times;
+	font-style: italic;
+}
+
+#auth {
+	font-size: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-top: 100px;
+	margin-bottom: 10px;
+	margin-left: 80%;
+	margin-right: 10px;
+	font-color: navy; 
+	background-color: white;
+	border-radius: 24%;
+}
+
+#auth a:link {
+	color: navy;
+	font-size: 20px; 
+	font-weight: bold;
+}
+
+#auth a:visited {
+	color: orange;
+}
+
+#auth a:hover {
+	color: blue;
+}
+
+button:hover {
+	box-shadow: inset 3px 3px 10px 0px navy;
+}
+
+button:active {
+  transform: translateY(4px);
+}
