@@ -1,5 +1,6 @@
 class MiscsController < ApplicationController
   before_action :set_misc, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /miscs
   # GET /miscs.json
@@ -25,6 +26,7 @@ class MiscsController < ApplicationController
   # POST /miscs.json
   def create
     @misc = Misc.new(misc_params)
+    @misc = current_user
 
     respond_to do |format|
       if @misc.save
@@ -69,6 +71,6 @@ class MiscsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def misc_params
-      params.require(:misc).permit(:content, :user_id, :title)
+      params.require(:misc).permit(:content, :title)
     end
 end

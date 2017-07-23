@@ -1,5 +1,6 @@
-class DiariesController < ApplicationController
+class DiariesController < LayoutController
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /diaries
   # GET /diaries.json
@@ -25,6 +26,9 @@ class DiariesController < ApplicationController
   # POST /diaries.json
   def create
     @diary = Diary.new(diary_params)
+    puts current_user
+    puts "asfas"
+    @diary.user = current_user
 
     respond_to do |format|
       if @diary.save
@@ -69,6 +73,6 @@ class DiariesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_params
-      params.require(:diary).permit(:title, :content, :user_id)
+      params.require(:diary).permit(:title, :content)
     end
 end

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :miscs
-  resources :travel_journals
   resources :diaries
   resources :category_maps
   get 'main/about'
@@ -8,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'home/index'
 
-  root to: "main#about"
+  root to: "home#about"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

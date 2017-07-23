@@ -11,12 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :category %><br>
-    <%= f.select :category, options_for_select([['Diary',0],['Travel Journal', 1],['Misc', 2]])%>
+    <%= f.select :category, options_for_select([['Diary',0],['Travel Journal', 1],['Misc', 2]]), {}, { :class => "form-control"}%>
 
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "submit", class: "btn btn-primary"%>
   </div>
 <% end %>

@@ -8,10 +8,10 @@
 }
 
 section {
-	margin: 70px;
-	box-shadow: 4px 8px 15px 5px darkorange;
+	margin: 0 70px 70px 70px;
+	box-shadow: 0px 2px 5px 1px darkolivegreen;
 	padding: 20px;
-	height: 400px;
+	background-color: #FF7F51;
 }
 
 
@@ -92,10 +92,10 @@ nav ul li a:hover {
 	color: blue;
 }
 
-button:hover {
+button.auth:hover {
 	box-shadow: inset 3px 3px 10px 0px navy;
 }
 
-button:active {
+button.auth:active {
   transform: translateY(4px);
 }

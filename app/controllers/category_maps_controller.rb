@@ -26,22 +26,16 @@ class CategoryMapsController < ApplicationController
   # POST /category_maps.json
   def create
     @category_map = CategoryMap.new(category_map_params)
-    puts params
     category_map = params["category_map"]
     category = category_map["category"].to_i
-    puts category.class
-    puts CategoryMap::DIARY.class
     respond_to do |format|
       if @category_map.save
         format.html do 
           if category == CategoryMap::DIARY
-            puts "sdgsd"
             redirect_to '/diaries/new'
           elsif category == CategoryMap::TRAVEL
-              puts "sdgsd"
               redirect_to '/travel_journals/new'
           elsif category == CategoryMap::MISC
-              puts "sdgsd"
               redirect_to '/miscs/new'
           end
         end

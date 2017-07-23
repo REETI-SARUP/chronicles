@@ -1,3 +1,14 @@
 
-<%= link_to "Signout", destroy_user_session_path, method: :delete %>
-<%= link_to "NEW", new_category_map_path %>
+<main>
+  <section>
+    <h1>My Diaries</h1>
+    <ul>
+      <% @diaries.each do |diary| %>
+        <div>
+          <li><%= link_to image_tag("diaries.png") + "<span>#{diary.title}</span>".html_safe, diary_path(diary)%>
+          </li>
+        </div>
+      <% end %>
+    </ul>
+  </section>
+</main>

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -16,4 +16,16 @@
 </p>
 
 <%= link_to 'Edit', edit_diary_path(@diary) %> |
-<%= link_to 'Back', diaries_path %>
+<%= link_to 'Back', diaries_path %> -->
+<main id="diaryContent">
+	<aside>
+		
+	</aside>
+	<div>
+		<%= image_tag 'diaryContent.png' %>
+		<div>
+			<h1><%= @diary.title %></h1>
+			<%= raw(@diary.content) %>
+		</div>
+	</div>
+</main>

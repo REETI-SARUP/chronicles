@@ -1,3 +1,20 @@
 // Place all the styles related to the Diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+main#diaryContent{
+	display: flex;
+	aside {
+		width: 30%;
+		height: 100vh;
+	}
+	div{
+		flex-grow: 1;
+		text-align: center;
+		position: relative;
+		div{
+			position: absolute;
+			top: 100px;
+			left: 300px;
+		}
+	}
+}
