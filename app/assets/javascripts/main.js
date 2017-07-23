@@ -21,11 +21,11 @@ function sectionPosition(eID) {
 
 function smoothScroll(eID) {
     var startY = currentYPos();
-    var endY = sectionPosition(eID);
-    var distance = endY - startY;
+    var endY = sectionPosition(eID) - 80;
+    var distance = endY > startY ? endY-startY : startY-endY;
     var speed = 20;
     var step = distance/250;
-    var jumpY = startY + step;
+    var jumpY = endY>startY ? startY+step : startY-step;
     var timer = 0;
     if(endY > startY) {
         for(var i=startY; i<endY; i+=step) {
@@ -35,6 +35,16 @@ function smoothScroll(eID) {
             	jumpY = endY;
            	}
            	timer++;
+        } 
+    }
+    else {
+        for(var i=startY; i>endY; i-=step) {
+            setTimeout("window.scrollTo(0, "+jumpY+")", timer * speed);
+            jumpY -= step; 
+            if(jumpY < endY) {
+                jumpY = endY;
+            }
+            timer++;
         } 
     }
 }

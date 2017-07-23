@@ -15,3 +15,7 @@
  # SASS
 *= require devise_bootstrap_views
  */
+
+a:hover {
+	background-color: transparent;
+}
